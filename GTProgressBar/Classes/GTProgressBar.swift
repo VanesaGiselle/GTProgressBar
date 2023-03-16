@@ -11,7 +11,7 @@ public class GTProgressBar: UIView {
     private let minimumProgressBarWidth: CGFloat = 20
     private let minimumProgressBarFillHeight: CGFloat = 1
     private let backgroundView = NoClearView()
-    private let fillView = NoClearView()
+    public let fillView = NoClearView()
     private let progressLabel = UILabel()
     private var _progress: CGFloat = 1
     
@@ -346,7 +346,7 @@ public class GTProgressBar: UIView {
         }
     }
     
-    class NoClearView: UIView {
+    public class NoClearView: UIView {
         override public var backgroundColor: UIColor? {
             didSet {
                 if backgroundColor == nil || backgroundColor == UIColor.clear {
